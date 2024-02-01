@@ -1,5 +1,8 @@
 const express = require('express')
 const {connection,PORT} = require('./Config/db')
+const noteController = require('./Controllers/notecontroller')
+const userController = require('./Controllers/usercontroller')
+const authorization = require('./Middleware/authorization')
 
 const app = express()
 app.use(express.json())
@@ -7,6 +10,10 @@ app.use(express.json())
 app.get('/', (req,res)=>{
     res.send({msg:"API Running!!"})
 })
+
+app.use('/user',userController)
+app.use(authorization)
+app.use('/note',noteController)
 
 app.listen(PORT, async ()=>{
     try {
