@@ -1,10 +1,12 @@
 const express = require('express')
+const cors = require('cors')
 const {connection,PORT} = require('./Config/db')
 const noteController = require('./Controllers/notecontroller')
 const userController = require('./Controllers/usercontroller')
 const authorization = require('./Middleware/authorization')
 
 const app = express()
+app.use(cors())
 app.use(express.json())
 
 app.get('/', (req,res)=>{
