@@ -96,7 +96,7 @@ noteController.patch('/edit/:id', async (req,res)=>{
 
 //delete
 
-noteController.patch('/edit/:id', async (req,res)=>{
+noteController.delete('/delete/:id', async (req,res)=>{
     const id = req.params.id
     const createrId = req.userId
     try {
