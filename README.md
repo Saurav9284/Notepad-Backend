@@ -1,7 +1,7 @@
 
 ## API Endpoints🌍 :-
 
-🌐 <a src='https://panicky-spacesuit-colt.cyclic.app/'>URL</a>
+🌐 <a href='https://panicky-spacesuit-colt.cyclic.app/'>URL</a>
 
 ✅ Server check ==> app/
 
