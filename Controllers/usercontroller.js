@@ -4,12 +4,12 @@ const UserModel = require('../Models/User')
 const jwt = require('jsonwebtoken')
 const {JWT_SECRET} = require('../Config/db')
 
-
 const userController = express.Router()
+
+//Signup
 
 userController.post('/signup', async (req,res)=>{
     const {name,country,email,password} = req.body;
-
     if(!name || !country || !email || !password){
         return res.send({msg:'Please fill all the details!!'})
     }
@@ -42,17 +42,15 @@ userController.post('/signup', async (req,res)=>{
 });
 
 
+//login
+
 userController.post('/login', async (req,res)=>{
     const {email , password} = req.body;
-
     if(!email || !password){
         return res.send({msg:'Please fill all the details'})
     }
-
     try {
-
         const user = await UserModel.findOne({email})
-
         if(!email){
             return res.send({msg:'Please Signup first!!'})
         }
@@ -71,7 +69,6 @@ userController.post('/login', async (req,res)=>{
                     res.send({msg:'Wrong Credentials!!'})
                 }
         })
-        
     } catch (error) {
         console.log(error)
         res.send({msg:'Something went wrong'})

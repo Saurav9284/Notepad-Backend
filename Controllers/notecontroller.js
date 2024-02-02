@@ -2,6 +2,9 @@ const express = require('express')
 const NoteModel = require('../Models/Notes')
 const noteController = express.Router()
 
+
+
+// Create 
 noteController.post('/create', async (req,res)=>{
     const userId = req.userId
     const {title, description} = req.body;
