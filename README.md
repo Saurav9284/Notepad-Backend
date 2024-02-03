@@ -1,7 +1,7 @@
 
 ## API Endpoints🌍 :-
 
-🌐 <a href='https://panicky-spacesuit-colt.cyclic.app/'>URL</a>
+🌐 <a href='https://notepad-backend-production.up.railway.app/'>URL</a>
 
 ✅ Server check ==> app/
 
