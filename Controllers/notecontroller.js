@@ -8,7 +8,7 @@ const noteController = express.Router()
 noteController.get("/", async (req, res) => {
     try {
       const page = parseInt(req.query.page) || 1;
-      const pageSize = parseInt(req.query.pageSize) || 10;
+      const pageSize = parseInt(req.query.pageSize) || 12;
       
       let query = {};
   
